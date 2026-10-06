@@ -70,7 +70,7 @@ a:hover { color: var(--link-h); border-bottom-color: currentColor; }
   margin-bottom: 3.4rem;
 }
 .profile img {
-  width: 248px;
+  width: 300px;
   height: auto;
   border-radius: 6px;
   flex-shrink: 0;
