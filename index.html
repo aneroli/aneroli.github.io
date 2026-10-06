@@ -1,172 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Neroli Austin</title>
-<meta name="description" content="Neroli Austin — Assistant Professor of Finance, Ross School of Business, University of Michigan. Research in law and finance, real estate, and private markets.">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Neroli Austin",
-  "jobTitle": "Assistant Professor of Finance",
-  "affiliation": "Ross School of Business, University of Michigan",
-  "url": "https://www.neroliaustin.com",
-  "email": "mailto:neroli@umich.edu"
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Neroli Austin</title>
+  <meta name="description" content="Neroli Austin — Assistant Professor of Finance, Ross School of Business, University of Michigan. Research areas: Law and Finance, Real Estate, Private Markets.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Neroli Austin">
+  <meta property="og:description" content="Assistant Professor of Finance, Ross School of Business, University of Michigan. Research areas: Law and Finance, Real Estate, Private Markets.">
+  <meta property="og:url" content="https://www.neroliaustin.com/">
+
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.abstract { display: block; }</style></noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Neroli Austin",
+    "jobTitle": "Assistant Professor of Finance",
+    "affiliation": "Ross School of Business, University of Michigan",
+    "url": "https://www.neroliaustin.com",
+    "email": "mailto:neroli@umich.edu"
+  }
+  </script>
 </head>
 <body>
 
-<header>
-  <nav aria-label="Main">
-    <a href="index.html" class="active">Home</a>
-    <a href="assets/CV_Neroli_Austin.pdf">CV</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" class="active">Home</a>
+      <a href="assets/CV_Neroli_Austin.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
 
-  <!-- ======================= Hero ======================= -->
-  <section class="hero">
-    <img src="assets/neroli_austin.jpg" alt="Portrait of Neroli Austin" class="portrait">
-    <div class="hero-text">
-      <h1>Neroli Austin</h1>
-      <p class="role">Assistant Professor of Finance</p>
-      <p class="affiliation">Ross School of Business, University of Michigan</p>
-      <p class="bio">My research interests are in law and finance, with a
-        specialization in real estate and private markets.</p>
-      <p class="bio">I completed my PhD in Finance at the University of Oxford
-        in June 2023. Before Oxford, I was an economist at the Reserve Bank of
-        New Zealand. I hold a Master of Commerce in Economics from the
-        University of Canterbury, and a Bachelor of Laws with First Class
-        Honors and a Bachelor of Economics from the University of Sydney.</p>
-      <p class="quick-links">
-        <a href="mailto:neroli@umich.edu">neroli@umich.edu</a>
-        <span aria-hidden="true">·</span>
-        <a href="assets/CV_Neroli_Austin.pdf">Curriculum Vitae</a>
-        <!-- When ready, add profile links here, e.g.:
-        <span aria-hidden="true">·</span>
-        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=XXXX">SSRN</a>
-        <span aria-hidden="true">·</span>
-        <a href="https://scholar.google.com/citations?user=XXXX">Google Scholar</a>
-        -->
-      </p>
+    <!-- ======================= Profile ======================= -->
+    <div class="profile">
+      <img src="assets/neroli_austin.jpg" alt="Neroli Austin">
+      <div>
+        <h1>Neroli Austin</h1>
+        <p class="subtitle">Assistant Professor of Finance</p>
+        <p class="affil">Ross School of Business, University of Michigan</p>
+        <div class="bio">
+          <p class="bio-block">Research areas:</p>
+          <ul>
+            <li>Law and Finance</li>
+            <li>Real Estate</li>
+            <li>Private Markets</li>
+          </ul>
+          <p class="bio-block">Background:</p>
+          <ul>
+            <li>A.P. at Ross, 2023&ndash;present</li>
+            <li>PhD in Finance, University of Oxford, 2023</li>
+            <li>Economist, Reserve Bank of New Zealand, 2013&ndash;2016</li>
+            <li>Master of Commerce in Economics, University of Canterbury, 2016</li>
+            <li>Bachelor of Laws with First Class Honors and Bachelor of Economics, University of Sydney, 2013</li>
+          </ul>
+        </div>
+        <!-- Profile links go first in this row when ready, each followed by a
+             separator, e.g.:
+             <a href="SSRN_AUTHOR_PAGE_URL" target="_blank" rel="noopener noreferrer">SSRN</a><span class="sep">·</span>
+             <a href="GOOGLE_SCHOLAR_URL" target="_blank" rel="noopener noreferrer">Google Scholar</a><span class="sep">·</span> -->
+        <p class="quicklinks">
+          <a href="assets/CV_Neroli_Austin.pdf" target="_blank" rel="noopener noreferrer">CV</a><span class="sep">·</span>
+          <a href="mailto:neroli@umich.edu">neroli@umich.edu</a>
+        </p>
+      </div>
     </div>
-  </section>
 
-  <!-- ======================= Working papers ======================= -->
-  <!-- To add a paper: copy an <article class="paper"> block.            -->
-  <!-- The award line is optional; the <details> abstract is optional.   -->
-  <section id="working-papers">
-    <h2>Working Papers</h2>
+    <!-- ======================= Working papers ======================= -->
+    <!-- To add a paper: copy one <li> ... </li> block inside the list.     -->
+    <!-- Optional lines: pub-formerly (old title), pub-meta (coauthors,     -->
+    <!-- award, journal), pub-links (links, separated by the "sep" span),   -->
+    <!-- and the abstract. An abstract needs a matching pair: the button's  -->
+    <!-- aria-controls and the abstract's id (e.g. abs-newpaper).           -->
+    <section id="working-papers">
+      <h2>Working Papers</h2>
+      <ul class="pub-list">
 
-    <article class="paper">
-      <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4269561">Keeping
-        Up with the Blackstones: Institutional Investors and Gentrification</a></h3>
-      <p class="award">Homer Hoyt Dissertation Award (AREUEA, 2024)</p>
-      <p class="paper-links">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4269561">SSRN</a>
-      </p>
-      <details class="abstract">
-        <summary>Abstract</summary>
-        <p>Policy makers worry that institutional investment in residential
-        real estate drives up house prices and crowds out minority residents.
-        Using mergers of private-equity backed firms to isolate quasi-exogenous
-        variation in concentration of ownership at the neighborhood level, I
-        find that shocks to institutional ownership indeed cause higher prices
-        and rents &mdash; but, contrary to popular opinion &mdash; increase
-        rather than decrease neighborhood diversity. The reason for increased
-        diversity is that some minorities benefit from the relaxation of
-        borrowing constraints as a result of higher house prices and take out
-        mortgages for home improvement, increasing the attractiveness of their
-        homes; other minorities move in because more rental properties become
-        available as institutional ownership crowds out predominantly white
-        individual home ownership. Institutional investors benefit from
-        increased market values of their houses in increasingly attractive
-        neighborhoods, but also extract value by challenging tax
-        assessors&rsquo; valuations and thus reduce their tax bill by an
-        estimated $4.1b nationwide. This is a hitherto unknown source of rent
-        extraction by institutional investors. I conclude that policy makers
-        are right to be worried about some aspects of institutional investment
-        in residential real estate, but they are mostly worried about the
-        wrong thing.</p>
-      </details>
-    </article>
+        <!-- No SSRN posting for the retitled paper yet. Once there is one,
+             add inside pub-links, after the Abstract button:
+             <span class="sep">·</span><a href="URL" target="_blank" rel="noopener noreferrer">SSRN</a> -->
+        <li id="paper-blackstones">
+          <span class="pub-title">Keeping Up with the Blackstones: Institutional Investors and Neighbors&rsquo; Home Investment</span><br>
+          <span class="pub-formerly">Previously circulated as &ldquo;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4269561" target="_blank" rel="noopener noreferrer">Keeping Up with the Blackstones: Institutional Investors and Gentrification</a>&rdquo;</span><br>
+          <span class="pub-meta">Homer Hoyt Dissertation Award (AREUEA, 2024)</span>
+          <div class="pub-links">
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-blackstones">Abstract</button>
+          </div>
+          <div class="abstract" id="abs-blackstones">
+            <p>I study the effect of private equity housing investments on the
+            owner-occupiers around them, exploring a novel channel where
+            sophisticated investors coordinate the behavior of other investors.
+            I exploit variation in the recognizability of institutional
+            investors, as well as a new national news index that captures how
+            owners would interpret the presence of an institution in their
+            local market. Consistent with the coordination channel, I find
+            that:
+            (<em>i</em>) A one standard deviation increase in recognizable
+            institutional ownership raises owner-occupiers&rsquo; home
+            investments by 3.6% of the base rate per standard deviation of the
+            news shift.
+            (<em>ii</em>) Anonymous institutional ownership produces no
+            response.
+            (<em>iii</em>) Around recognizable institutions, the effect grows
+            with the number of surrounding owners.
+            (<em>iv</em>) The induced owner-occupier investment is
+            value-preserving maintenance rather than overinvestment. At the
+            sector&rsquo;s disclosed national spending, the induced investment
+            amounts to $1.3 to $1.6 billion per year.</p>
+          </div>
+        </li>
 
-    <article class="paper">
-      <h3>Awareness Is Not Enough: Race, Representation, and Property Tax Appeals</h3>
-    </article>
+        <li id="paper-covlite">
+          <span class="pub-title">Heterogeneous Creditors and Cov-Lite Loans</span>
+          <div class="pub-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4280726" target="_blank" rel="noopener noreferrer">SSRN</a>
+          </div>
+        </li>
 
-    <article class="paper">
-      <h3>Catching a Break: VCs and the Commercialization of Innovation</h3>
-      <p class="coauthors">with Johan Cassel and Katarina Warg</p>
-    </article>
+        <li id="paper-catching">
+          <span class="pub-title">Catching a Break: VCs and the Commercialization of Innovation</span><br>
+          <span class="pub-meta">with Johan Cassel and Katarina Warg</span>
+          <div class="pub-links">
+            <span class="pub-note">Draft available upon request</span>
+          </div>
+        </li>
 
-    <article class="paper">
-      <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4280726">Heterogeneous
-        Creditors and Cov-Lite Loans</a></h3>
-      <p class="paper-links">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4280726">SSRN</a>
-      </p>
-    </article>
-  </section>
+      </ul>
+    </section>
 
-  <!-- ======================= Publications ======================= -->
-  <section id="publications">
-    <h2>Publications</h2>
+    <!-- ======================= Publications ======================= -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pub-list">
 
-    <article class="paper">
-      <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116467">Decomposing
-        Value Gains &ndash; The Case of the Best Leveraged Buyout Ever</a></h3>
-      <p class="coauthors">with Ludovic Phalippou</p>
-      <p class="journal"><em>Journal of Corporate Finance</em>, 2023</p>
-      <p class="paper-links">
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116467">SSRN</a>
-      </p>
-    </article>
-  </section>
+        <li id="paper-hilton">
+          <span class="pub-title">Decomposing Value Gains &ndash; The Case of the Best Leveraged Buyout Ever</span><br>
+          <span class="pub-meta">with Ludovic Phalippou<br>
+          <em>Journal of Corporate Finance</em>, 2023</span>
+          <div class="pub-links">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4116467" target="_blank" rel="noopener noreferrer">SSRN</a>
+          </div>
+        </li>
 
-  <!-- ======================= Work in progress ======================= -->
-  <section id="work-in-progress">
-    <h2>Work in Progress</h2>
+      </ul>
+    </section>
 
-    <article class="paper">
-      <h3>Non-Excludable Innovation Adoption</h3>
-      <p class="coauthors">with Shane Miller</p>
-    </article>
-  </section>
+    <!-- ======================= Teaching ======================= -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="pub-list">
 
-  <!-- ======================= Teaching ======================= -->
-  <section id="teaching">
-    <h2>Teaching</h2>
+        <li>
+          <span class="pub-title">Ross School of Business, University of Michigan</span>
+          <ul class="course-list">
+            <li>Real Estate Finance <span class="course-meta">MBA &middot; 2025&ndash;2026</span></li>
+            <li>Real Estate Capital Markets <span class="course-meta">MBA &middot; 2025&ndash;2026</span></li>
+            <li>Real Estate Finance and Investment <span class="course-meta">Undergraduate &middot; 2024&ndash;2026</span></li>
+            <li>Real Estate Finance and Investment I <span class="course-meta">MBA &middot; 2024</span></li>
+          </ul>
+        </li>
 
-    <h3 class="teach-inst">Ross School of Business, University of Michigan</h3>
-    <ul class="teach-list">
-      <li>Real Estate Finance <span class="teach-meta">MBA &middot; 2025&ndash;2026</span></li>
-      <li>Real Estate Capital Markets <span class="teach-meta">MBA &middot; 2025&ndash;2026</span></li>
-      <li>Real Estate Finance and Investment <span class="teach-meta">Undergraduate &middot; 2024&ndash;2026</span></li>
-      <li>Real Estate Finance and Investment I <span class="teach-meta">MBA &middot; 2024</span></li>
-    </ul>
+        <li>
+          <span class="pub-title">University of Oxford</span>
+          <ul class="course-list">
+            <li>Head Tutor, Oxford Private Markets Investments Programme <span class="course-meta">2020&ndash;2023</span></li>
+            <li>Head Tutor, Oxford Future of Real Estate Investment Programme <span class="course-meta">2022&ndash;2023</span></li>
+            <li>Teaching Assistant, FinTech <span class="course-meta">2020</span></li>
+            <li>Teaching Assistant, Big Data <span class="course-meta">2019</span></li>
+          </ul>
+        </li>
 
-    <h3 class="teach-inst">University of Oxford</h3>
-    <ul class="teach-list">
-      <li>Head Tutor, Oxford Private Markets Investments Programme <span class="teach-meta">2020&ndash;2023</span></li>
-      <li>Head Tutor, Oxford Future of Real Estate Investment Programme <span class="teach-meta">2022&ndash;2023</span></li>
-      <li>Teaching Assistant, FinTech <span class="teach-meta">2020</span></li>
-      <li>Teaching Assistant, Big Data <span class="teach-meta">2019</span></li>
-    </ul>
-  </section>
+      </ul>
+    </section>
 
-</main>
+  </main>
 
-<footer>
-  <p>&copy; 2026 Neroli Austin &middot;
-    <a href="mailto:neroli@umich.edu">neroli@umich.edu</a></p>
-</footer>
+  <footer class="site-footer">
+    <span>Neroli Austin</span>
+    <span>Ross School of Business, University of Michigan</span>
+  </footer>
+
+  <script>
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.abstract-toggle');
+      if (!btn) return;
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!panel) return;
+      var open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Hide abstract' : 'Abstract';
+    });
+  </script>
 
 </body>
 </html>

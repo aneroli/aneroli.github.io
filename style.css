@@ -1,205 +1,200 @@
-/* ==========================================================================
+/* ===========================================================================
    neroliaustin.com — style.css
-   Palette: Michigan navy #00274C, maize #FFCB05 (accent only)
-   Type: EB Garamond (self-hosted, fonts/), matching the CV
-   ========================================================================== */
-
-@font-face {
-  font-family: "EB Garamond";
-  src: url("fonts/ebgaramond.woff2") format("woff2");
-  font-weight: 400 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "EB Garamond";
-  src: url("fonts/ebgaramond-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
+   Minimal single-column layout, following julianterstegge.com:
+   system sans-serif, slate links, small uppercase section labels, and one
+   faint blue card per paper.
+   =========================================================================== */
 
 :root {
-  --navy: #00274c;
-  --maize: #ffcb05;
-  --ink: #1c1c1c;
-  --muted: #5a5a5a;
-  --rule: #d8d8d8;
-  --link: #00508f;
+  --ink:    #1a1a1a;   /* body text, name, titles          */
+  --link:   #2c3e50;   /* links                            */
+  --link-h: #1a1a1a;   /* link hover                       */
+  --muted:  #6f6f6f;   /* secondary text, section labels   */
+  --rule:   #e7e7e7;   /* hairline rules, separators       */
+  --card:   #e6edf5;   /* paper cards                      */
+  --inset:  #d9e2ec;   /* left edge of an open abstract    */
+  --maxw:   1000px;
 }
 
 * { box-sizing: border-box; }
 
-html { font-size: 20px; }
+html { -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0;
-  font-family: "EB Garamond", Garamond, Georgia, serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  margin: 0 auto;
+  max-width: var(--maxw);
+  padding: 2.2rem 1.25rem 4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+               Arial, "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
   color: var(--ink);
-  background: #fff;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
-main, header nav, footer p {
-  max-width: 44rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-}
-
-/* ---------- Nav ---------- */
-header {
-  border-bottom: 1px solid var(--navy);
-}
-header nav {
-  display: flex;
-  gap: 1.6rem;
-  padding-top: 0.9rem;
-  padding-bottom: 0.55rem;
-}
-header nav a {
-  color: var(--navy);
+a {
+  color: var(--link);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s ease, color .15s ease;
+}
+a:hover { color: var(--link-h); border-bottom-color: currentColor; }
+
+.sep { color: var(--rule); margin: 0 .55rem; }
+
+/* ---------- Navigation ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-nav { display: flex; flex-wrap: wrap; gap: .4rem 2.1rem; font-size: 1.02rem; }
+.site-nav a { color: var(--ink); border-bottom: none; padding-bottom: 2px; }
+.site-nav a:hover { color: var(--ink); border-bottom: none; }
+.site-nav a.active {
   font-weight: 600;
-}
-header nav a.active {
-  box-shadow: 0 3px 0 0 var(--maize);
-}
-header nav a:hover {
-  box-shadow: 0 3px 0 0 var(--navy);
+  border-bottom: 2px solid var(--ink);
 }
 
-/* ---------- Hero ---------- */
-.hero {
+/* ---------- Profile ---------- */
+.profile {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   align-items: flex-start;
-  margin-top: 2.2rem;
+  margin-bottom: 3.4rem;
 }
-.portrait {
-  width: 11rem;
-  max-width: 40vw;
+.profile img {
+  width: 248px;
   height: auto;
   border-radius: 6px;
   flex-shrink: 0;
 }
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0 0 0.2rem;
+.profile h1 {
+  margin: .1rem 0 .15rem;
+  font-size: 1.9rem;
   line-height: 1.15;
 }
-.role {
-  font-weight: 600;
-  margin: 0 0 0.1rem;
-}
-.affiliation {
-  color: var(--muted);
-  margin: 0 0 0.9rem;
-}
-.bio { margin: 0 0 0.7rem; }
-.quick-links { margin: 0.9rem 0 0; }
-.quick-links span { color: var(--muted); padding: 0 0.25rem; }
+.profile .subtitle { margin: 0; font-weight: 600; }
+.profile .affil { margin: .1rem 0 .9rem; color: var(--muted); }
 
-/* ---------- Links ---------- */
-a { color: var(--link); text-decoration: none; }
-main a:hover { text-decoration: underline; }
+.bio { margin: .6rem 0 0; }
+.bio p { margin: 0; }
+.bio .bio-block { margin-top: 1.5rem; }
+.bio ul { margin: .35rem 0 .6rem; padding-left: 1.35rem; }
+.bio li { margin: .12rem 0; }
 
-/* ---------- Sections ---------- */
+.quicklinks {
+  margin: 1.5rem 0 0;
+  font-size: .97rem;
+  line-height: 1.9;
+}
+.quicklinks a { white-space: nowrap; }
+
+/* ---------- Section labels ---------- */
 section { margin-top: 2.6rem; }
 h2 {
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: var(--navy);
-  margin: 0 0 0.35rem;
-  padding-bottom: 0.15rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-/* ---------- Papers ---------- */
-.paper { margin-top: 1.25rem; }
-.paper h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.3;
-}
-.paper h3 a { color: var(--navy); }
-.paper h3 a:hover { color: var(--link); }
-.coauthors { color: var(--muted); margin: 0.1rem 0 0; }
-.journal { margin: 0.1rem 0 0; }
-.award {
-  font-style: italic;
-  margin: 0.15rem 0 0;
-  padding-left: 0.6rem;
-  border-left: 3px solid var(--maize);
-}
-.paper-links {
-  margin: 0.25rem 0 0;
-  font-size: 0.92rem;
-}
-.paper-links span { color: var(--muted); padding: 0 0.25rem; }
-
-/* Abstract toggle */
-details.abstract { margin: 0.25rem 0 0; }
-details.abstract summary {
-  cursor: pointer;
-  color: var(--link);
-  font-size: 0.92rem;
-  width: fit-content;
-}
-details.abstract summary:hover { text-decoration: underline; }
-details.abstract p {
-  font-size: 0.95rem;
-  color: var(--ink);
-  margin: 0.5rem 0 0;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--rule);
-}
-
-/* ---------- Teaching ---------- */
-.teach-inst {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 1.2rem 0 0.3rem;
-}
-.teach-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.teach-list li { margin: 0.25rem 0; }
-.teach-meta {
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
   color: var(--muted);
-  font-size: 0.92rem;
+  margin: 0 0 .9rem;
+}
+
+/* ---------- Paper cards ---------- */
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub-list > li {
+  margin-bottom: 1.1rem;
+  padding: 1rem 1.2rem;
+  background: var(--card);
+  border-radius: 8px;
+}
+.pub-title { font-weight: 600; }
+.pub-formerly { color: var(--muted); font-size: .9rem; font-style: italic; }
+.pub-meta { color: var(--muted); font-size: .96rem; }
+.pub-meta em { font-style: italic; }
+
+/* Links inside the muted lines stay muted; a dotted underline marks them */
+.pub-formerly a,
+.pub-meta a {
+  color: inherit;
+  border-bottom: 1px dotted #bcbcbc;
+}
+.pub-formerly a:hover,
+.pub-meta a:hover { color: var(--link-h); border-bottom-color: currentColor; }
+
+.pub-links { font-size: .92rem; margin-top: .15rem; }
+.pub-links a { white-space: nowrap; }
+.pub-links .sep { margin: 0 .5rem; }
+.pub-note { color: var(--muted); }
+
+/* Abstract toggle, styled to match the links beside it */
+.abstract-toggle {
+  font: inherit;
+  color: var(--link);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.abstract-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
+
+.abstract {
+  display: none;
+  margin-top: .6rem;
+  padding: .65rem .85rem;
+  background: #ffffff;
+  border-left: 3px solid var(--inset);
+  border-radius: 0 4px 4px 0;
+  font-size: .95rem;
+  line-height: 1.62;
+}
+.abstract.open { display: block; }
+.abstract p { margin: 0; }
+
+/* ---------- Teaching (courses listed inside a card) ---------- */
+.course-list {
+  list-style: none;
+  margin: .2rem 0 0;
+  padding: 0;
+  font-size: .96rem;
+}
+.course-list li { margin: .1rem 0; }
+.course-meta {
+  color: var(--muted);
+  font-size: .92rem;
   white-space: nowrap;
 }
 
 /* ---------- Footer ---------- */
-footer {
-  margin-top: 3.2rem;
+.site-footer {
+  margin-top: 3.5rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--rule);
-}
-footer p {
-  padding-top: 0.9rem;
-  padding-bottom: 1.4rem;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: .88rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .4rem;
 }
 
 /* ---------- Phone ---------- */
-@media (max-width: 640px) {
-  html { font-size: 18px; }
-  .hero {
-    flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 1.6rem;
-  }
-  .portrait {
-    width: 9rem;
-    max-width: 60vw;
-  }
+@media (max-width: 560px) {
+  body { font-size: 16px; padding-top: 1.6rem; }
+  .pub-list > li { padding: .85rem .95rem; }
+  .profile { flex-direction: column; align-items: center; text-align: center; }
+  .profile img { width: 200px; }
+  /* Centred text would leave the bullets stranded at the left edge */
+  .bio { text-align: left; }
+  .site-header { justify-content: center; }
 }
