@@ -1,0 +1,205 @@
+/* ==========================================================================
+   neroliaustin.com — style.css
+   Palette: Michigan navy #00274C, maize #FFCB05 (accent only)
+   Type: EB Garamond (self-hosted, fonts/), matching the CV
+   ========================================================================== */
+
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/ebgaramond.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("fonts/ebgaramond-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --navy: #00274c;
+  --maize: #ffcb05;
+  --ink: #1c1c1c;
+  --muted: #5a5a5a;
+  --rule: #d8d8d8;
+  --link: #00508f;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 20px; }
+
+body {
+  margin: 0;
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fff;
+}
+
+main, header nav, footer p {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+/* ---------- Nav ---------- */
+header {
+  border-bottom: 1px solid var(--navy);
+}
+header nav {
+  display: flex;
+  gap: 1.6rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.55rem;
+}
+header nav a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+header nav a.active {
+  box-shadow: 0 3px 0 0 var(--maize);
+}
+header nav a:hover {
+  box-shadow: 0 3px 0 0 var(--navy);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 2.2rem;
+}
+.portrait {
+  width: 11rem;
+  max-width: 40vw;
+  height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.2rem;
+  line-height: 1.15;
+}
+.role {
+  font-weight: 600;
+  margin: 0 0 0.1rem;
+}
+.affiliation {
+  color: var(--muted);
+  margin: 0 0 0.9rem;
+}
+.bio { margin: 0 0 0.7rem; }
+.quick-links { margin: 0.9rem 0 0; }
+.quick-links span { color: var(--muted); padding: 0 0.25rem; }
+
+/* ---------- Links ---------- */
+a { color: var(--link); text-decoration: none; }
+main a:hover { text-decoration: underline; }
+
+/* ---------- Sections ---------- */
+section { margin-top: 2.6rem; }
+h2 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- Papers ---------- */
+.paper { margin-top: 1.25rem; }
+.paper h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+.paper h3 a { color: var(--navy); }
+.paper h3 a:hover { color: var(--link); }
+.coauthors { color: var(--muted); margin: 0.1rem 0 0; }
+.journal { margin: 0.1rem 0 0; }
+.award {
+  font-style: italic;
+  margin: 0.15rem 0 0;
+  padding-left: 0.6rem;
+  border-left: 3px solid var(--maize);
+}
+.paper-links {
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+}
+.paper-links span { color: var(--muted); padding: 0 0.25rem; }
+
+/* Abstract toggle */
+details.abstract { margin: 0.25rem 0 0; }
+details.abstract summary {
+  cursor: pointer;
+  color: var(--link);
+  font-size: 0.92rem;
+  width: fit-content;
+}
+details.abstract summary:hover { text-decoration: underline; }
+details.abstract p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin: 0.5rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--rule);
+}
+
+/* ---------- Teaching ---------- */
+.teach-inst {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.2rem 0 0.3rem;
+}
+.teach-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.teach-list li { margin: 0.25rem 0; }
+.teach-meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3.2rem;
+  border-top: 1px solid var(--rule);
+}
+footer p {
+  padding-top: 0.9rem;
+  padding-bottom: 1.4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 640px) {
+  html { font-size: 18px; }
+  .hero {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.6rem;
+  }
+  .portrait {
+    width: 9rem;
+    max-width: 60vw;
+  }
+}
