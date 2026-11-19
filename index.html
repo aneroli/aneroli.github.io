@@ -84,9 +84,9 @@
 
         <li id="paper-landbanking">
           <span class="pub-title">Land Banking and Housing Supply</span><br>
-          <span class="pub-meta">with Julian Terstegge</span>
+          <span class="pub-meta">with <a href="https://julianterstegge.com/" target="_blank" rel="noopener noreferrer">Julian Terstegge</a></span>
           <div class="pub-links">
-            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-landbanking">Abstract</button><span class="sep">·</span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7728238" target="_blank" rel="noopener noreferrer">SSRN</a>
+            <button type="button" class="abstract-toggle" aria-expanded="false" aria-controls="abs-landbanking">Abstract</button><span class="sep">·</span><button type="button" class="figure-toggle" aria-expanded="false" aria-controls="fig-landbanking">Figure 1</button><span class="sep">·</span><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7728238" target="_blank" rel="noopener noreferrer">SSRN</a>
           </div>
           <div class="abstract" id="abs-landbanking">
             <p>We study the financing of the U.S. builder sector, and document
@@ -110,6 +110,14 @@
             during the 2020&ndash;2021 housing boom, a quarter of annual U.S.
             single-family homebuilding. We conclude that land banking has
             contributed to the current U.S. housing shortage.</p>
+          </div>
+          <div class="figure-panel" id="fig-landbanking">
+            <p class="figure-headline">The share of land that builders hold
+            via option has grown from 23% in 2009 to 72% in 2025.</p>
+            <img src="assets/figures/fig_land_banking_and_housing_supply.png"
+                 alt="Figure 1 of the paper: the share of land that public
+                 homebuilders hold via option, by fiscal year, rising from
+                 23% in 2009 to 72% in 2025.">
           </div>
         </li>
 
@@ -211,13 +219,17 @@
 
   <script>
     document.addEventListener('click', function (e) {
-      var btn = e.target.closest('.abstract-toggle');
+      var btn = e.target.closest('.abstract-toggle, .figure-toggle');
       if (!btn) return;
       var panel = document.getElementById(btn.getAttribute('aria-controls'));
       if (!panel) return;
       var open = panel.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? 'Hide abstract' : 'Abstract';
+      if (btn.classList.contains('figure-toggle')) {
+        btn.textContent = open ? 'Hide figure' : 'Figure 1';
+      } else {
+        btn.textContent = open ? 'Hide abstract' : 'Abstract';
+      }
     });
   </script>
 

@@ -134,8 +134,9 @@ h2 {
 .pub-links .sep { margin: 0 .5rem; }
 .pub-note { color: var(--muted); }
 
-/* Abstract toggle, styled to match the links beside it */
-.abstract-toggle {
+/* Abstract and figure toggles, styled to match the links beside them */
+.abstract-toggle,
+.figure-toggle {
   font: inherit;
   color: var(--link);
   background: none;
@@ -146,7 +147,8 @@ h2 {
   vertical-align: baseline;
   white-space: nowrap;
 }
-.abstract-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
+.abstract-toggle:hover,
+.figure-toggle:hover { color: var(--link-h); border-bottom-color: currentColor; }
 
 .abstract {
   display: none;
@@ -160,6 +162,26 @@ h2 {
 }
 .abstract.open { display: block; }
 .abstract p { margin: 0; }
+
+/* Figure panel, same card inset as an open abstract */
+.figure-panel {
+  display: none;
+  margin-top: .6rem;
+  padding: .8rem .85rem;
+  background: #ffffff;
+  border-left: 3px solid var(--inset);
+  border-radius: 0 4px 4px 0;
+  max-width: 64ch;
+}
+.figure-panel.open { display: block; }
+.figure-panel img { display: block; width: 100%; height: auto; }
+.figure-headline {
+  margin: 0 0 .55rem;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
 
 /* ---------- Teaching (courses listed inside a card) ---------- */
 .course-list {
